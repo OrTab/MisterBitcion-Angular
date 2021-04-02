@@ -1,0 +1,15 @@
+.app-header {
+    // background-color: rgb(21,20,23);
+    & header {
+      & nav {
+            display: flex;
+            a {
+                color: rgb(245, 245, 245);
+                text-decoration: none;
+                line-height: 2.5em;
+                font-size: 1.2rem;
+                margin-inline-end: 2.2em;
+            }
+        }
+    }
+}

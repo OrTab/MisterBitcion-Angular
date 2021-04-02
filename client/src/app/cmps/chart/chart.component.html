@@ -1,0 +1,11 @@
+<div class="chart" [ngClass]="{'beforeLoad':!isLoad}">
+    <div [hidden]="isLoad" class="loader">
+        <img src="https://thumbs.gfycat.com/AmazingRashFulmar-max-1mb.gif" alt="">
+    </div>
+    <div *ngIf="isDelay">
+        <h3 *ngIf="isLoad">{{chartData?.name}}</h3>
+        <google-chart #chart (ready)="load()" [title]="chartData?.title" [type]="type" [data]="chartData?.data"
+            [options]="chartData?.options" [width]="width" [height]="height" >
+        </google-chart>
+    </div>
+</div>

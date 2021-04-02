@@ -1,0 +1,11 @@
+<div *ngIf="user" class="home-page">
+    <h1>Mister Bitcoin</h1>
+    <div class="user-card">
+        <h2>Hello {{user.fullname}}</h2>
+        <div class="user-details">
+            <h4>Coins : {{user.coins}} ₿</h4>
+            <h4>BTC : {{userBitcoinValue}}</h4>
+        </div>
+    </div>
+    <statistic-page [isShowAll]="true"></statistic-page>
+</div>

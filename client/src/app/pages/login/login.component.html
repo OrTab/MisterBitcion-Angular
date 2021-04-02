@@ -1,0 +1,20 @@
+<div class="login-container">
+    <!-- {{credentials|json}} -->
+    <div class="login">
+        <h4>{{msg}}</h4>
+        <form #form="ngForm" (ngSubmit)="onSubmitForm(form.value)">
+            <div>
+                <!-- <label for="">username : </label> -->
+                <input required [(ngModel)]="credentials.username" placeholder="Email / Username" type="text"
+                    name="username" autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <!-- <label for="">password : </label> -->
+                <input required [(ngModel)]="credentials.password" placeholder="password" type="password"
+                    name="password" autocomplete="off" spellcheck="false">
+            </div>
+            <button type="submit">Login</button>
+            <a [routerLink]="['/signup']">Don't have an account? Sign up</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="edit-container">
+    <div class="actions-btn">
+        <button [routerLink]="user._id?['/contact',user._id]:['/contact']">Back</button>
+        <button *ngIf="user._id" (click)="onDeleteUser()">Delete</button>
+    </div>
+    <div class="contact-edit">
+        <h4>{{msg}}</h4>
+        <form #form="ngForm" (ngSubmit)="onSubmitForm(form.value)">
+            <div class="user-img">
+                <label>
+                    <div *ngIf="user.imgUrl" class="user-hover">
+                        <img class="user-thumbnail" [src]="user.imgUrl" alt="" />
+                        <h5>{{user.imgUrl ? 'Change' : 'Upload'}}</h5>
+                    </div>
+                    <span *ngIf="!user.imgUrl"
+                        class="user-thumbnail">{{utilService.getNameInitials(user.fullname)}}</span>
+                    <input (input)="uploadImg($event)" hidden="true" type="file" accept="image/x-png,image/gif,image/jpeg" />
+                    <h5>{{user.imgUrl ? 'Change' : 'Upload'}}</h5>
+                </label>
+            </div>
+            <!-- <div class="errors" *ngIf="form.invalid && form.touched">*All address fields are required</div> -->
+            <div>
+                <label #name='' for="">Fullname : </label>
+                <input required [(ngModel)]="user.fullname" placeholder="Fullname" type="text" name="fullname"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <label #name='' for="">Username : </label>
+                <input required [(ngModel)]="user.username" placeholder="Name" type="text" name="username"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <label for="">Email : </label>
+                <!-- <div *ngIf="email.errors?.pattern">Invalid Email</div> -->
+                <input #email="ngModel" required [(ngModel)]="user.email" placeholder="Email" type="email" name="email"
+                    autocomplete="off">
+            </div>
+            <div>
+                <!-- <div *ngIf="phone.invalid">Must Put Number</div> -->
+                <label for="">Phone : </label>
+                <input #phone="ngModel" required [(ngModel)]="user.phone" placeholder="Phone" type="phone" name="phone"
+                    autocomplete="off">
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>

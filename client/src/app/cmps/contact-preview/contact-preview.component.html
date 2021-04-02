@@ -1,0 +1,13 @@
+<div class="contact-preview" [routerLink]="['/contact/',contact._id]">
+    <div class="img-container">
+        <img *ngIf="!isLoad&&contact.imgUrl" src="https://i.stack.imgur.com/sEKwt.gif" alt="" />
+        <img *ngIf="contact.imgUrl" (load)="load()" [src]="contact.imgUrl" class="user-thumbnail" alt="" />
+        <div *ngIf="!contact.imgUrl" class="user-thumbnail">{{utilService.getNameInitials(contact.fullname)}}</div>
+    </div>
+    <div class="details">
+        <h4>{{contact.fullname}}</h4>
+    </div>
+    <div class="actions">
+        <!-- <a [routerLink]="['/contact/',contact._id]">Details</a> -->
+    </div>
+</div>

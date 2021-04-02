@@ -1,0 +1,11 @@
+.contact-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .contact-list {
+      flex-direction: column;
+    }
+}

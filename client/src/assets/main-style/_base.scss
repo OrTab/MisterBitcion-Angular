@@ -1,0 +1,46 @@
+body{
+    background-color:rgba(248, 244, 244, 0.884);
+    margin: 0%;
+    background: url("https://i.pinimg.com/564x/c5/d7/af/c5d7af624c66723267c70ab99f1a7c6a.jpg")
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #f9f9f9;;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0%;
+}
+
+.main-layout {
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.user-thumbnail {
+    transition: background 0.1s ease;
+    background-color: $red;
+    color: $white;
+    text-align: center;
+    line-height: 30px;
+    // position:absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+}

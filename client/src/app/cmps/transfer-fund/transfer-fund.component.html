@@ -1,0 +1,8 @@
+<div class="transfer-fund">
+    <h4>{{msg}}</h4>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form.value)">
+        <h4>Transfer coins to {{contact.fullname}}</h4>
+        <label for="">Amount : </label>
+        <input type="number" [ngModel] name="amount">
+    </form>
+</div>

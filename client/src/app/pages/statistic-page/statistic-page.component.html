@@ -1,0 +1,8 @@
+<div class="statistic-page"> 
+    <div class="market-price">
+        <chart [chartData]="marketPrice"></chart>
+    </div>
+    <div class="transitions">
+        <chart *ngIf="!isShowAll" [chartData]="transactionsPerDay"></chart>
+    </div>
+</div>

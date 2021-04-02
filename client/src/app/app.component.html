@@ -1,0 +1,14 @@
+<!-- <sign-up></sign-up> -->
+
+<div class="app-header">
+    <header class="main-layout">
+        <nav>
+            <a routerLink="" routerLinkActive="active">Home</a>
+            <a routerLink="/contact" routerLinkActive="active">Contacts</a>
+            <a routerLink="/statistics" routerLinkActive="active">Statistics</a>
+            <a routerLink="/profile" routerLinkActive="active">Profile</a>
+            <button (click)="userService.logOut()">Log Out</button>
+        </nav>
+    </header>
+</div>
+<router-outlet></router-outlet>

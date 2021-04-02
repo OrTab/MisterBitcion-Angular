@@ -1,0 +1,6 @@
+<div class="contact-filter">
+    <div class="filters-btn-container">
+        <button (click)="setIsShowFilters()">{{isShowFilters?'Hide':'Filter'}}</button>
+    </div>
+    <input *ngIf="isShowFilters" type="text" name="name" placeholder="Search" [(ngModel)]="filterBy.term" (input)="onSetFilter()" autocomplete="off" />
+</div>

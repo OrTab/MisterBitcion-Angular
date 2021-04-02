@@ -1,0 +1,30 @@
+.contact-filter {
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    
+    & label {
+        text-align: center;
+    }
+    
+    & input {
+        color: #f9f9f9;
+        margin: 0.5em;
+        padding: 1em;
+        background-color:rgb(27,29,35) ;
+        // box-shadow: 0 5px 12px 0 rgba(102, 100, 96, 0.568);
+        border: none;
+        &::placeholder{
+            color: #f9f9f9c9;
+        }
+    }
+    & .filters-btn-container {
+        align-self: center;
+        & button {
+            background-color:rgb(27,29,35) ;
+            color: #f9f9f9;
+            padding: 0.5em;
+            outline-style: none;
+        }
+    }
+}

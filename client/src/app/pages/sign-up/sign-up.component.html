@@ -1,0 +1,36 @@
+<div class="sign-up-container">
+    <!-- {{credentials|json}} -->
+    <div class="sign-up">
+        <h4>{{msg}}</h4>
+        <form #form="ngForm" (ngSubmit)="onSubmitForm(form.value)">
+            <div>
+                <!-- <label for="">Fullname : </label> -->
+                <input required [(ngModel)]="credentials.fullname" placeholder="Fullname" type="text" name="fullname"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <!-- <label for="">username : </label> -->
+                <input required [(ngModel)]="credentials.username" placeholder="username" type="text" name="username"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <!-- <label for="">password : </label> -->
+                <input required [(ngModel)]="credentials.password" placeholder="password" type="password" name="password"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div>
+                <!-- <label for="">Phone : </label> -->
+                <input #phone="ngModel" required [(ngModel)]="credentials.phone" placeholder="Phone" type="phone"
+                    name="phone" autocomplete="off">
+            </div>
+            <div>
+                <!-- <label for="">Email : </label> -->
+                <!-- <div *ngIf="email.errors?.pattern">Invalid Email</div> -->
+                <input  required [(ngModel)]="credentials.email" placeholder="Email" type="email"
+                    name="email" autocomplete="off">
+            </div>
+            <button type="submit">Sign Up</button>
+            <a [routerLink]="['/login']">Have an account already? log in</a>
+        </form>
+    </div>
+</div>
